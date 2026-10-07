@@ -31,12 +31,39 @@ A full-stack assessment tool for comparing study costs, funding gaps, financial 
 
 ```text
 .
-├── backend/                # Django project settings and URL routing
-├── assessments/            # Models, serializers, services, views, API tests
-├── frontend/               # React application and Tailwind configuration
-├── lender_data.json        # Runtime lender data loaded by seed_lenders
-├── .env.example            # Local environment variable template
-├── pytest.ini              # Django pytest configuration
+├── assessments/
+│   ├── management/commands/
+│   │   └── seed_lenders.py # Loads lender_data.json into PostgreSQL
+│   ├── migrations/         # Database schema history
+│   ├── admin.py            # Django admin registrations
+│   ├── models.py           # Assessment, Document, and Lender models
+│   ├── serializers.py      # REST API input/output validation
+│   ├── services.py         # Financial calculations, lender matching, document checklist/score
+│   ├── tests.py            # Backend service and API tests
+│   └── views.py            # Assessment, document, and lender API endpoints
+├── backend/
+│   ├── asgi.py             # ASGI application entry point
+│   ├── settings.py         # Django, PostgreSQL, REST, CORS, and environment settings
+│   ├── urls.py             # Admin and REST router registration
+│   └── wsgi.py             # WSGI application entry point
+├── frontend/
+│   ├── public/             # Static files served as-is
+│   ├── src/
+│   │   ├── assets/         # Images and app assets
+│   │   ├── App.jsx         # Assessment form, results, and document readiness UI
+│   │   ├── App.css         # Application component styles
+│   │   ├── api.js          # Django API client
+│   │   ├── index.css       # Global styles and Tailwind imports
+│   │   └── main.jsx        # React application entry point
+│   ├── eslint.config.js    # Frontend lint rules
+│   ├── index.html          # Vite HTML entry point
+│   ├── package.json        # Frontend scripts and dependencies
+│   └── vite.config.js      # Vite, React, and Tailwind plugins
+├── .env.example            # Environment variable template; copy to .env
+├── .gitignore              # Local secrets, generated files, and optional Lender_db.md
+├── lender_data.json        # Runtime lender records loaded by seed_lenders
+├── manage.py               # Django management entry point
+├── pytest.ini              # pytest configuration
 └── README.md
 ```
 
@@ -91,7 +118,7 @@ python manage.py migrate
 python manage.py seed_lenders
 ```
 
-`lender_data.json` is required by `seed_lenders` and supplies the lender records stored in PostgreSQL.The dynamic document checklist is defined in `assessments/services.py`.
+`lender_data.json` is required by `seed_lenders` and supplies the lender records stored in PostgreSQL. The dynamic document checklist is defined in `assessments/services.py`.
 
 ### 5. Run the backend
 
@@ -148,12 +175,3 @@ The result explicitly warns when information is missing and explains that a prel
 - Missing lender information is displayed as unavailable information rather than assumed eligibility.
 - The application does not guarantee approval or rejection.
 
-## Git
-
-Initialize and commit the repository as follows:
-
-```bash
-cd "Education loan app"
-git add .
-git commit -m "Initial GradGuide application"
-```
