@@ -154,6 +154,10 @@ npm run build
 npm run lint
 ```
 
+## Video Walkthrough
+
+[Watch the GradGuide walkthrough](https://drive.google.com/file/d/1Xjm15cLwOuFRW358j4gO71t5bpVLHQ8t/view?usp=sharing)
+
 ## Original features
 
 ### 1. Financial scenario planner
