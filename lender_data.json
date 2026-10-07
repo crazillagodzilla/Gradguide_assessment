@@ -1,0 +1,90 @@
+[
+  {
+    "name": "BOI",
+    "loan_type": "collateral",
+    "interest_rate": "9.00",
+    "minimum_cibil": 670,
+    "conditions": "Girls: 8.60%",
+    "document_categories": ["basic", "academic", "co_applicant", "property"]
+  },
+  {
+    "name": "BOI",
+    "loan_type": "non_collateral",
+    "interest_rate": "Not possible",
+    "minimum_cibil": null,
+    "conditions": "Not available in the supplied dataset.",
+    "document_categories": []
+  },
+  {
+    "name": "BOB",
+    "loan_type": "non_collateral",
+    "interest_rate": "8.45",
+    "minimum_cibil": 700,
+    "conditions": "Top 100 universities",
+    "document_categories": ["basic", "academic", "co_applicant"]
+  },
+  {
+    "name": "BOB",
+    "loan_type": "collateral",
+    "interest_rate": "8.95",
+    "minimum_cibil": 700,
+    "conditions": "Boys",
+    "document_categories": ["basic", "academic", "co_applicant", "property"]
+  },
+  {
+    "name": "BOB",
+    "loan_type": "collateral",
+    "interest_rate": "8.75",
+    "minimum_cibil": 700,
+    "conditions": "Girls",
+    "document_categories": ["basic", "academic", "co_applicant", "property"]
+  },
+  {
+    "name": "SBI",
+    "loan_type": "non_collateral",
+    "interest_rate": "9.40",
+    "minimum_cibil": 750,
+    "conditions": "Top 100 universities",
+    "document_categories": ["basic", "academic", "co_applicant"]
+  },
+  {
+    "name": "SBI",
+    "loan_type": "collateral",
+    "interest_rate": "8.40",
+    "minimum_cibil": 750,
+    "conditions": "",
+    "document_categories": ["basic", "academic", "co_applicant", "property"]
+  },
+  {
+    "name": "Credila",
+    "loan_type": "non_collateral",
+    "interest_rate": "10.75",
+    "minimum_cibil": null,
+    "conditions": "",
+    "document_categories": ["basic", "academic", "co_applicant"]
+  },
+  {
+    "name": "Credila",
+    "loan_type": "collateral",
+    "interest_rate": "9.25 - 9.75",
+    "minimum_cibil": null,
+    "conditions": "",
+    "document_categories": ["basic", "academic", "co_applicant", "property"]
+  },
+  {
+    "name": "Auxilo",
+    "loan_type": "non_collateral",
+    "interest_rate": "10.25",
+    "minimum_cibil": null,
+    "conditions": "",
+    "document_categories": ["basic", "academic", "co_applicant"]
+  },
+  {
+    "name": "Auxilo",
+    "loan_type": "collateral",
+    "interest_rate": "10.00",
+    "minimum_cibil": null,
+    "conditions": "",
+    "document_categories": ["basic", "academic", "co_applicant", "property"]
+  }
+]
